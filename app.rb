@@ -1,6 +1,8 @@
 require 'sinatra/base'
 require 'data_mapper'
 require 'dm-sqlite-adapter'
+require_relative 'lib/aws_helper'
+
 # require 'dm-postgres-adapter'
 
 DataMapper::Logger.new($stdout, :debug)
@@ -10,6 +12,7 @@ DataMapper.setup(:default, "sqlite://#{File.expand_path(File.dirname(__FILE__))}
 
 class App < Sinatra::Base
   helpers Sinatra::Helpers
+  register Sinatra::AwsHelper
 
   app_folders = %w(models helpers controllers routes)
   # Require our ruby fileses

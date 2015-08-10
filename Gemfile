@@ -10,3 +10,5 @@ gem 'rspec', '~>3.3'
 
 gem 'capistrano', '~>3.4'
 gem 'capistrano-ext', '~>1.2'
+
+gem 'aws-sdk', '~> 2'
