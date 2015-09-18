@@ -1,11 +1,10 @@
 class App < Sinatra::Base
 	get '/' do
-		get_something
-		erb :basic, :locals => {local_erb_var: 'xyz'}
+
+		ec2 = get_status
+		erb :status, :locals => {ec2: ec2}
 	end
 
-	get '/status' do
-    get_status
-    erb :status, :locals => {}
-  end
+	# get '/status' do
+  # end
 end

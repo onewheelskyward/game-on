@@ -2,3 +2,8 @@ db_server: localhost
 db_user:
 db_password:
 debug: true
+aws_access_key:
+aws_secret:
+aws_regions:
+  - us-west-1
+  - us-west-2
